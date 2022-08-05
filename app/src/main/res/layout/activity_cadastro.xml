@@ -17,7 +17,7 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <EditText
-        android:id="@+id/edNome"
+        android:id="@+id/etNome"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -26,12 +26,13 @@
         android:ems="10"
         android:hint="Nome"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <EditText
-        android:id="@+id/edEmail"
+        android:id="@+id/etEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -42,10 +43,10 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edNome" />
+        app:layout_constraintTop_toBottomOf="@+id/etNome" />
 
     <EditText
-        android:id="@+id/edSenha"
+        android:id="@+id/etSenha"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -56,7 +57,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
 
     <Switch
         android:id="@+id/swProfessor"
@@ -66,7 +67,7 @@
         android:layout_marginEnd="8dp"
         android:text="Professor"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edSenha" />
+        app:layout_constraintTop_toBottomOf="@+id/etSenha" />
 
     <Button
         android:id="@+id/btCadastrar"

@@ -24,9 +24,9 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class CadastroActivity extends AppCompatActivity {
 
-    private EditText edNome;
-    private EditText edEmail;
-    private EditText edSenha;
+    private EditText etNome;
+    private EditText etEmail;
+    private EditText etSenha;
     private Switch swProfessor;
     private Button btCadastrar;
     private FirebaseAuth mAuth;
@@ -38,9 +38,9 @@ public class CadastroActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
 
-        edNome = findViewById(R.id.edNome);
-        edEmail = findViewById(R.id.edEmail);
-        edSenha = findViewById(R.id.edSenha);
+        etNome = findViewById(R.id.etNome);
+        etEmail = findViewById(R.id.etEmail);
+        etSenha = findViewById(R.id.etSenha);
         swProfessor = findViewById(R.id.swProfessor);
         btCadastrar = findViewById(R.id.btCadastrar);
         mAuth = FirebaseAuth.getInstance();
@@ -72,13 +72,13 @@ public class CadastroActivity extends AppCompatActivity {
     }
 
     private void recuperarDados() {
-        if(edNome.getText().toString()==""||edEmail.getText().toString()==""||edSenha.getText().toString()==""){
+        if(etNome.getText().toString()==""||etEmail.getText().toString()==""||etSenha.getText().toString()==""){
             Toast.makeText(this, "Você de prencher todos os dados", Toast.LENGTH_LONG);
         }else{
             u = new Usuario();
-            u.setNome(edNome.getText().toString());
-            u.setEmail(edEmail.getText().toString());
-            u.setSenha(edSenha.getText().toString());
+            u.setNome(etNome.getText().toString());
+            u.setEmail(etEmail.getText().toString());
+            u.setSenha(etSenha.getText().toString());
             u.setProfessor(swProfessor.getShowText());
             if(swProfessor.isChecked()){
                 u.setProfessor(true);
