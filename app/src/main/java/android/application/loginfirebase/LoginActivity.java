@@ -21,7 +21,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class LoginActivity extends AppCompatActivity {
 
     private EditText etEmail;
-    private EditText etSenha;
+    private EditText etSenhaLogin;
     private Button btLogar;
     private FirebaseAuth mAuth;
     private Usuario u;
@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         mAuth = FirebaseAuth.getInstance();
         etEmail = findViewById(R.id.etEmail);
-        etSenha = findViewById(R.id.etSenha);
+        etSenhaLogin = findViewById(R.id.etSenhaLogin);
         btLogar = findViewById(R.id.btLogar);
 
         btLogar.setOnClickListener(new View.OnClickListener() {
@@ -68,7 +68,7 @@ public class LoginActivity extends AppCompatActivity {
     private void receberDados() {
         u = new Usuario();
         u.setEmail(etEmail.getText().toString());
-        u.setSenha(etSenha.getText().toString());
+        u.setSenha(etSenhaLogin.getText().toString());
 
     }
 }
